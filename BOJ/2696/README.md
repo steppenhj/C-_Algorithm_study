@@ -7,7 +7,7 @@ Priority Queue 문제이다.
 이제는 vector<int> ans;에 maxheap.top()을 push_back 해주고 출력한다.
 
 핵심 아이디어는 중앙값을 위해 maxheap과 minheap을 둘 다 사용하는 것이다.
-===========================================================
+
 
 priority_queue<int, vector<int>> maxheap;
 priority_queue<int, vector<int>, greater<int>> minheap;

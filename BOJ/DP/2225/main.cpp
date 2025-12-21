@@ -22,10 +22,14 @@ int main() {
         dp[1][i] = 1;
     }
 
+    for(int i=0; i<=K; i++){
+        dp[i][0] = 1;
+    }
+
     for(int k=2; k<=K; k++){
-        for(int n=0; n<=N; n++){
+        for(int n=1; n<=N; n++){
             dp[k][n] = dp[k-1][n] + dp[k][n-1];
-            dp[k][n] %= 100000000;
+            dp[k][n] %= 1000000000;
         }
     }
 
